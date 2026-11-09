@@ -1,0 +1,1740 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stone Sip</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css"
+        integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        * {
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+
+        body {
+            background-color: #fefee8;
+        }
+
+        /* Start nav bar  */
+
+        .nav-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            margin: 20px;
+        }
+
+        #nav-left {
+            width: 140px;
+            height: 50px;
+            background-color: #422922;
+
+            border-radius: 20px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+            gap: 10px;
+        }
+
+        #nav-left p {
+            color: white;
+            font-size: 20px;
+        }
+
+        #nav-left i {
+            color: white;
+        }
+
+        #nav-right {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+        }
+
+        #nav-center {
+            margin-left: 130px;
+        }
+
+        #nav-right .nav-left {
+            display: flex;
+        }
+
+        #nav-right .nav-left #img {
+            width: 60px;
+            height: 50px;
+            background-color: #422922;
+            border-radius: 30px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #nav-right #buy-now {
+            width: 140px;
+            height: 50px;
+            background-color: #422922;
+            color: white;
+
+            border-radius: 20px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+        }
+
+        #nav-right .nav-right {
+            display: flex;
+        }
+
+        #nav-right .nav-right #img {
+            transform: rotate(-30deg);
+        }
+
+        #nav-right .nav-right {
+            position: relative;
+        }
+
+        #nav-right .nav-right #zero {
+            width: 25px;
+            height: 25px;
+            background-color: #422922;
+            border-radius: 50%;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            color: white;
+
+            position: absolute;
+            right: 0;
+            top: -5px;
+        }
+
+        /* End nav bar  */
+
+
+        /* Start hero section */
+
+        .bean {
+            width: 45px;
+            position: relative;
+
+            animation: bean infinite 3s ease-in-out;
+
+        }
+
+        @keyframes bean {
+            0% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(50px);
+            }
+
+            100% {
+                transform: translateY(0);
+            }
+        }
+
+        .bean1 {
+            position: absolute;
+            left: 120px;
+            top: 100px;
+        }
+
+        .bean2 {
+            position: absolute;
+            left: 400px;
+            top: 300px;
+        }
+
+        .bean3 {
+            position: absolute;
+            right: 20px;
+            top: 200px;
+        }
+
+        .bean4 {
+            position: absolute;
+            right: 270px;
+            top: 100px;
+        }
+
+        .bean5 {
+            position: absolute;
+            left: 20px;
+            top: 600px;
+        }
+
+        .bean6 {
+            position: absolute;
+            left: 250px;
+            top: 950px;
+        }
+
+        .bean7 {
+            position: absolute;
+            right: 250px;
+            top: 800px;
+        }
+
+        .bean8 {
+            position: absolute;
+            right: 120px;
+            top: 1000px;
+        }
+
+
+        .hero-section {
+            margin-top: 100px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .hero-section .reviews {
+            display: flex;
+        }
+
+        .hero-section .slogan {
+            font-size: 100px;
+            margin-left: 300px;
+            margin-right: 300px;
+
+            color: #422922;
+
+            text-transform: uppercase;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .hero-section .note {
+            font-size: 25px;
+            color: #422922;
+
+            margin-bottom: 35px;
+        }
+
+        /* End hero section  */
+
+        /* Start image section  */
+        .image-section {
+            margin-top: 500px;
+            width: 100%;
+            height: 400px;
+            background-color: #422922;
+
+            display: flex;
+            justify-content: center;
+            align-items: end;
+
+            padding-bottom: 30px;
+        }
+
+        .image-section .image-item {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .image-section .image-item img {
+            width: 220px;
+            height: 150px;
+            background-color: #4c342d;
+        }
+
+        .image-section .image-item p {
+            width: 220px;
+            height: 150px;
+            background-color: transparent;
+
+            color: white;
+            text-transform: uppercase;
+            font-weight: bold;
+            font-size: 30px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .bottle {
+            position: relative;
+        }
+
+        .image-bottle img {
+            width: 1200px;
+
+            position: absolute;
+            left: 200px;
+            top: -450px;
+        }
+
+        /* End image section  */
+
+
+        /* Start brew section  */
+        .main-brew {
+            margin: 200px 50px;
+        }
+
+        .topic-brew {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+        }
+
+        .topic-brew p {
+            font-weight: 900;
+            text-transform: uppercase;
+            font-size: 60px;
+            color: #422922;
+        }
+
+        .brew {
+            display: flex;
+            margin-top: 300px;
+        }
+
+        .left-brew {
+            width: 55%;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        .left-brew img {
+            border: 8px solid white;
+            width: 100%;
+        }
+
+        .left-brew #img1 {
+            transform: rotate(5deg) translate(150px) scale(1.1);
+        }
+
+        .left-brew #img2 {
+            transform: rotate(-10deg) translate(-330px) translateY(-110px) scale(1.1);
+            transition: all .2s ease-in;
+        }
+
+        .left-brew #img2:hover {
+            transform: rotate(-10deg) translate(-330px) translateY(-140px) scale(1.2);
+        }
+
+        .left-brew #img3 {
+            transform: rotate(10deg) translate(-250px) translateY(-70px) scale(1.1);
+            transition: all .2s ease-in;
+        }
+
+        .left-brew #img3:hover {
+            transform: rotate(10deg) translate(-250px) translateY(-90px) scale(1.2);
+        }
+
+        .right-brew {
+            width: 45%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: start;
+            flex-wrap: wrap;
+
+            gap: 20px;
+        }
+
+        .right-brew h1 {
+            text-transform: uppercase;
+            color: #422922;
+            font-size: 35px;
+            font-weight: 900;
+            line-height: 1;
+        }
+
+        /* End brew section  */
+
+
+        /* Start gallery section  */
+        .header-container {
+            margin: 0 50px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .header-container h1 {
+            text-transform: uppercase;
+            font-weight: bold;
+            color: #422922;
+            font-size: 70px;
+        }
+
+        .main-container {
+            margin: 0 50px;
+            display: flex;
+            gap: 40px;
+        }
+
+        .left-container {
+            width: 45%;
+        }
+
+        .left-container img {
+            width: 100%;
+            height: 100%;
+
+            object-fit: cover;
+        }
+
+        .right-container {
+            width: 55%;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            column-gap: 15px;
+        }
+
+        .gallery-container {
+            background-color: #f7f0e1;
+        }
+
+        .topic-item {
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .topic-item p {
+            width: 90px;
+            height: 30px;
+            background-color: #fffffb;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .image-item {
+            position: relative;
+        }
+
+        .image-item .img1 {
+            width: 350px;
+            margin-bottom: 90px;
+            margin-top: 50px;
+
+
+            transform: rotate(7deg);
+            transition: all 5s ease-in-out;
+
+            position: relative;
+            z-index: 2;
+
+            animation: floating infinite 3s ease-in-out;
+        }
+
+        .image-item .img1:hover {
+            width: 350px;
+
+            margin-bottom: 90px;
+            margin-top: 50px;
+
+            transform: rotate(0deg) !important;
+        }
+
+        .image-item .img2 {
+            width: 350px;
+
+            position: absolute;
+            left: 0;
+            top: 100px;
+
+            z-index: 1;
+            transform: scale(0);
+
+            transition: all .2s linear;
+        }
+
+        .image-item:hover .img2 {
+            width: 350px;
+
+            position: absolute;
+            left: 0;
+            top: 100px;
+
+            z-index: 1;
+            transform: scale(1);
+        }
+
+        .image-item .img3 {
+            width: 200px;
+
+            position: absolute;
+            left: 80px;
+            bottom: 10px;
+        }
+
+        @keyframes floating {
+            0% {
+                transform: rotate(7deg) translateY(0);
+            }
+
+            50% {
+                transform: rotate(7deg) translateY(-40px);
+            }
+
+            100% {
+                transform: rotate(7deg) translateY(0);
+            }
+
+        }
+
+        .gallery-bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .gallery-bottom h1 {
+            color: #422922;
+            text-transform: uppercase;
+            font-weight: bold;
+            font-size: 40px;
+        }
+
+        .gallery-bottom .arrow-item {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: #422922;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .gallery-bottom img {
+            width: 10px;
+        }
+
+        /* End gallery section  */
+
+        /* Start review section  */
+
+        .main-review {
+            position: relative;
+            width: 100%;
+            min-height: 100vh;
+            margin-top: 200px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+
+        }
+
+        .main-review .review-bg-video {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+            object-fit: cover;
+            z-index: 1;
+
+        }
+
+        .review-header {
+            position: absolute;
+            left: 20px;
+            top: 100px;
+            z-index: 2;
+        }
+
+        .review-header h1 {
+            color: white;
+            font-size: 60px;
+            text-transform: uppercase;
+        }
+
+        .review-arrow {
+            position: absolute;
+            right: 20px;
+            top: 200px;
+            z-index: 2;
+        }
+
+        .review-arrow .fa-chevron-left,
+        .review-arrow .fa-chevron-right {
+            width: 70px;
+            height: 50px;
+            background-color: white;
+            border-radius: 10px;
+            margin: 5px;
+            align-content: center;
+        }
+
+        .review-wrapper {
+            margin-top: 300px;
+            margin-bottom: 200px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            z-index: 2;
+        }
+
+        .review-card {
+            width: 470px;
+            height: 100%;
+            background-color: #f7f0e1;
+            border-radius: 20px;
+
+            padding: 100px 40px;
+        }
+
+        .review-card-top img {
+            width: 150px;
+        }
+
+        .review-card-top h1 {
+            font-size: 30px;
+            text-transform: uppercase;
+            color: #422922;
+        }
+
+        .review-card>p {
+            margin-top: 20px;
+            color: #422922;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .review-card .horizontal-line {
+            margin-top: 20px;
+            width: 100%;
+            height: 2px;
+            background-color: #ebebe3;
+        }
+
+        .review-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .review-footer .right {
+            margin-top: 20px;
+            margin-right: 45px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .review-footer .right p {
+            width: 10px;
+        }
+
+        .review-footer img {
+            width: 30px;
+        }
+
+        /* End review sectioin  */
+
+
+
+        /* Start Everyday Section  */
+        .everday {
+            width: auto;
+            height: 100%;
+
+            margin: 150px 0px;
+
+            position: relative;
+
+        }
+
+        .everday .top {
+            margin-left: 800px;
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+
+            margin-bottom: 700px;
+        }
+
+        .everday .top h1 {
+            text-transform: uppercase;
+            font-size: 50px;
+            color: #422922;
+        }
+
+        .everday .top .header {
+            margin-bottom: 30px;
+        }
+
+        .everday .main-img img {
+            width: 100%;
+
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+
+        .everday .bottom {
+            margin: 30px;
+        }
+
+        .everday .bottom h1 {
+            text-transform: uppercase;
+            font-size: 50px;
+            color: #422922;
+            margin-bottom: 20px;
+        }
+
+        .everday .bottom>p {
+            font-weight: bold;
+            font-size: 18px;
+            color: #422922;
+        }
+
+        .everday .bottom .imgs {
+            margin-top: 20px;
+            display: grid;
+            gap: 10px;
+            grid-template-columns: repeat(3, 240px);
+        }
+
+        .everday .bottom .img1 {
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+
+            width: 230px;
+            height: 50px;
+            border: 1px solid #422922;
+            border-radius: 20px;
+        }
+
+        .everday .bottom .img2 {
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+
+            width: 220px;
+            height: 50px;
+            border: 1px solid #422922;
+            border-radius: 20px;
+        }
+
+        .everday .bottom .img3 {
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+
+            width: 220px;
+            height: 50px;
+            border: 1px solid #422922;
+            border-radius: 20px;
+        }
+
+        .everday .bottom .img4 {
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+
+            width: 220px;
+            height: 50px;
+            border: 1px solid #422922;
+            border-radius: 20px;
+        }
+
+        .everday .bottom .img5 {
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+
+            width: 220px;
+            height: 50px;
+            border: 1px solid #422922;
+            border-radius: 20px;
+        }
+
+        /* End Everyday Section  */
+
+
+        /* Start About Us Section */
+        .about-main {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+
+            gap: 30px;
+
+            margin-bottom: 150px;
+        }
+
+        .about-left>img {
+            width: 100%;
+            height: 65%;
+            object-fit: cover;
+            margin-bottom: 30px;
+
+        }
+
+        .about-right img {
+            width: 100%;
+            object-fit: cover;
+        }
+
+        .about-left {
+            width: 50%;
+            margin-left: 50px;
+        }
+
+        .about-left .text {
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+            align-items: start;
+            gap: 30px;
+        }
+
+        .about-left .text>h1 {
+            font-weight: bold;
+            color: #422922;
+        }
+
+        .about-left .text>p {
+            font-size: 20px;
+            font-weight: bold;
+            color: #422922;
+        }
+
+        .about-right {
+            width: 50%;
+            margin-right: 50px;
+        }
+
+        .about-right img {
+            height: 100%;
+        }
+
+        /* End About Us Section */
+
+
+        /* Start Line Up Section */
+        .header-lineup {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .header-lineup h1 {
+            text-transform: uppercase;
+            font-size: 60px;
+            color: #422922;
+
+            margin-left: 30px;
+        }
+
+        .header-lineup .icon-lineup {
+            display: flex;
+            justify-content: space-between;
+            gap: 10px;
+        }
+
+        .icon-lineup {
+            margin-right: 20px;
+        }
+
+        .icon-lineup #img1,
+        .icon-lineup #img2,
+        .icon-lineup #img3 {
+            width: 60px;
+            height: 60px;
+            background-color: #422922;
+            border-radius: 50%;
+            color: black;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .gallery-slide {
+
+            display: flex;
+            justify-content: space-between;
+            margin: 30px 30px;
+        }
+
+        .gallery-slide img {
+            border: 2px solid #422922;
+            border-radius: 20px;
+        }
+
+        /* End Line Up Section */
+
+        /* Start Footer Section */
+        .footer {
+            background-color: #422922;
+
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .footer .footer-left {
+            width: 60%;
+
+            margin: 100px 40px;
+
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+
+            gap: 20px;
+
+        }
+
+        .footer .footer-left img {
+            margin-left: 50px;
+        }
+
+        .footer .footer-left .menu {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .footer .footer-left .menu .div1,
+        .footer .footer-left .menu .div2,
+        .footer .footer-left .menu .div3 {
+            display: flex;
+            flex-direction: column;
+            margin: 50px;
+
+            color: #f7f0e1;
+            font-weight: bold;
+        }
+
+        .footer .footer-left .menu .div1 .nav1,
+        .footer .footer-left .menu .div2 .nav2,
+        .footer .footer-left .menu .div3 .nav3 {
+            margin-top: 10px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .footer-left .nav1 a,
+        .footer-left .nav2 a,
+        .footer-left .nav3 a {
+
+            color: #f7f0e1;
+            text-decoration: none;
+
+        }
+
+        .footer-left .follow h1 {
+            color: #f7f0e1;
+            margin-left: 50px;
+            margin-bottom: 20px;
+
+        }
+
+        .footer-left .follow .icon {
+            display: flex;
+        }
+
+        .footer-left .follow .icon1 {
+            width: 60px;
+            height: 60px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: purple;
+            border-radius: 50%;
+        }
+
+        .footer-left>p {
+            margin-top: 30px;
+            color: #f7f0e1;
+            margin-left: 50px;
+        }
+
+        .footer .footer-right {
+            width: 40%;
+            height: 100%;
+
+            margin: 100px 60px;
+        }
+
+        .footer .footer-right .content {
+            width: 450px;
+            height: 680px;
+            background-color: #f7f0e1;
+            border-radius: 20px;
+
+            padding: 30px;
+
+            position: relative;
+        }
+
+        .footer-right .title {
+            display: flex;
+            justify-content: start;
+            gap: 30px;
+        }
+
+        .footer-right .content>img {
+            position: absolute;
+            left: 20%;
+            bottom: 0;
+        }
+
+        .footer-right .content h1 {
+            text-transform: uppercase;
+            font-weight: bold;
+            color: #422922;
+        }
+
+        .footer-right .content p {
+            color: #422922;
+            font-weight: bold;
+        }
+
+        /* End Footer Section */
+    </style>
+</head>
+
+<body>
+    <!-- Star nav bar -->
+    <section>
+        <div class="nav-bar">
+            <div id="nav-left">
+                <p>All Pages</p>
+                <i class="fa-solid fa-chevron-down"></i>
+            </div>
+
+            <div id="nav-center">
+                <img width="200px"
+                    src="https://cdn.prod.website-files.com/693a0d53ce426f450963dbf9/693b33fe248ce84f31a8db90_ffe.svg"
+                    alt="" />
+            </div>
+
+            <div id="nav-right">
+                <div class="nav-left">
+                    <div id="img">
+                        <img width="10px"
+                            src="	https://cdn.prod.website-files.com/693a0d53ce426f450963dbf9/693a1b5e5f6d07fed59bbfaf_ecd.svg"
+                            alt="" />
+                    </div>
+                    <div id="buy-now">
+                        <p>Buy Now</p>
+                    </div>
+                </div>
+
+                <div class="nav-right">
+                    <div id="img">
+                        <img width="50px"
+                            src="https://cdn.prod.website-files.com/693a0d53ce426f450963dbf9/69455dd90ecdda0187275294_soda_629145.svg"
+                            alt="" />
+                    </div>
+                    <div id="zero">
+                        <p>0</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- End nav bar -->
+
+    <!-- Start hero section  -->
+    <section>
+        <div class="hero-section">
+
+            <img class="bean1 bean"
+                src="https://cdn.prod.website-files.com/693a0d53ce426f450963dbf9/693ad7bd14e09071e93d67da_vendiblend-coffee-beans.webp"
+                alt="">
+
+            <img class="bean2 bean"
+                src="https://cdn.prod.website-files.com/693a0d53ce426f450963dbf9/693ad7bd14e09071e93d67dc_vendibean-coffee-ground.webp"
+                alt="">
+
+            <img class="bean3 bean"
+                src="https://cdn.prod.website-files.com/693a0d53ce426f450963dbf9/693ad7bd14e09071e93d67da_vendiblend-coffee-beans.webp"
+                alt="">
+
+            <img class="bean4 bean"
+                src="https://cdn.prod.website-files.com/693a0d53ce426f450963dbf9/693ad7bd14e09071e93d67d8_vendi-bean-whole-bean-coffee.webp"
+                alt="">
+
+            <img class="bean5 bean"
+                src="https://cdn.prod.website-files.com/693a0d53ce426f450963dbf9/693ad7bd14e09071e93d67dc_vendibean-coffee-ground.webp"
+                alt="">
+
+            <img class="bean6 bean"
+                src="https://cdn.prod.website-files.com/693a0d53ce426f450963dbf9/693ad7bd14e09071e93d67d8_vendi-bean-whole-bean-coffee.webp"
+                alt="">
+
+            <img class="bean7 bean"
+                src="https://cdn.prod.website-files.com/693a0d53ce426f450963dbf9/693ad7bd14e09071e93d67dc_vendibean-coffee-ground.webp"
+                alt="">
+
+            <img class="bean8 bean"
+                src="https://cdn.prod.website-files.com/693a0d53ce426f450963dbf9/693ad7bd14e09071e93d67d8_vendi-bean-whole-bean-coffee.webp"
+                alt="">
+
+            <div class="reviews">
+                <img width="120px"
+                    src="https://cdn.prod.website-files.com/693a0d53ce426f450963dbf9/693a18bfb81f272a0c881e10_fe.avif"
+                    alt="">
+                <p>344 Reviews</p>
+            </div>
+
+            <div class="slogan">
+                <p>Smooth Cold Brew, Perfectly Canned</p>
+            </div>
+
+            <div class="note">
+                <p>Slow-steeped for hours, never bitter.</p>
+            </div>
+
+            <div>
+                <div id="nav-right">
+                    <div class="nav-left">
+                        <div id="img">
+                            <img width="10px"
+                                src="	https://cdn.prod.website-files.com/693a0d53ce426f450963dbf9/693a1b5e5f6d07fed59bbfaf_ecd.svg"
+                                alt="" />
+                        </div>
+                        <div id="buy-now">
+                            <p>Buy Now</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End hero section  -->
+
+    <!-- Start image section  -->
+    <section class="bottle">
+        <div class="image-section">
+            <div class="image-item">
+                <img src="https://cdn.prod.website-files.com/693a0d53ce426f450963dbf9/693b664441b39bf8ce5c09da_645e961e61054643a93518f0_file%2520(11).svg.svg"
+                    alt="">
+                <img src="https://cdn.prod.website-files.com/693a0d53ce426f450963dbf9/693b6644147828344c988f26_645e96379e44ba579088677c_file%2520(15).svg.svg"
+                    alt="">
+                <p>As Seen In</p>
+                <img src="https://cdn.prod.website-files.com/693a0d53ce426f450963dbf9/693b6767e53fbb1ce6026ba4_645e9554b543cb57f52f553a_file%2520(12).svg.svg"
+                    alt="">
+                <img src="https://cdn.prod.website-files.com/693a0d53ce426f450963dbf9/693b676738c584e9a1098562_645e96379e44ba579088677c_file%2520(15).svg.svg"
+                    alt="">
+            </div>
+        </div>
+        <div class="image-bottle">
+            <img src="https://cdn.prod.website-files.com/693a0d53ce426f450963dbf9/6940641e2cfc3ea0b8718cab_Frame%2098.avif"
+                alt="">
+        </div>
+
+    </section>
+    <!-- End image section  -->
+
+    <!-- Start brew section  -->
+    <section>
+        <div class="main-brew">
+
+            <div class="topic-brew">
+                <p>COLD BREW</p>
+                <p>WITHOUT ANY COMPROMISE.</p>
+            </div>
+
+            <div class="brew">
+
+                <div class="left-brew">
+                    <img id="img1"
+                        src="https://cdn.prod.website-files.com/693a0d53ce426f450963dbf9/693ccdfc06779cafa07ef6d5_Rectangle-3-Copy-2.jpg.avif"
+                        alt="black girl">
+                    <img id="img2"
+                        src="https://cdn.prod.website-files.com/693a0d53ce426f450963dbf9/693b6db72834d48e5272f10f_wcds.avif"
+                        alt="blue girl">
+                    <img id="img3"
+                        src="https://cdn.prod.website-files.com/693a0d53ce426f450963dbf9/693b683100a12a01c43d8bc7_ws.avif"
+                        alt="two girl">
+                </div>
+
+                <div class="right-brew">
+
+                    <h1>Cold brew made the right way</h1>
+                    <h3>We brew slowly, never rush the process, and use carefully selected beans to create cold brew
+                        that’s
+                        smooth, balanced, and easy to enjoy—anytime, anywhere.</h3>
+
+                    <div id="nav-right">
+                        <div class="nav-left">
+                            <div id="img">
+                                <img width="10px"
+                                    src="	https://cdn.prod.website-files.com/693a0d53ce426f450963dbf9/693a1b5e5f6d07fed59bbfaf_ecd.svg"
+                                    alt="" />
+                            </div>
+                            <div id="buy-now">
+                                <p>Learn More</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+    </section>
+    <!-- End brew section  -->
+
+    <!-- Start gallery section  -->
+    <section class="gallery">
+        <div class="header-container">
+            <h1>The Drink lineup</h1>
+            <div id="nav-right">
+                <div class="nav-left">
+                    <div id="img">
+                        <img width="10px"
+                            src="	https://cdn.prod.website-files.com/693a0d53ce426f450963dbf9/693a1b5e5f6d07fed59bbfaf_ecd.svg"
+                            alt="" />
+                    </div>
+                    <div id="buy-now">
+                        <p>View All</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="main-container">
+            <div class="left-container">
+                <img src="https://cdn.prod.website-files.com/693a0d53ce426f450963dbf9/693b7617383c4b053d1f80c5_wecfdsx.avif"
+                    alt="">
+            </div>
+            <div class="right-container">
+
+                <div>
+                    <div class="gallery-container">
+                        <div class="topic-item">
+                            <p>Best Seller</p>
+                            <p>$33.00 USD</p>
+                        </div>
+                        <div class="image-item">
+                            <img class="img1"
+                                src="https://cdn.prod.website-files.com/693a0d53ce426f450963dc44/693b76b7d7914f856b168885_Frame%2028-p-2000.png"
+                                alt="">
+                            <img class="img2"
+                                src="https://cdn.prod.website-files.com/693a0d53ce426f450963dbf9/693da4ab219709f7138b926b_splash.avif"
+                                alt="">
+                            <img class="img3"
+                                src="https://cdn.prod.website-files.com/693a0d53ce426f450963dbf9/693b7ac2c35cfbbd839b4c02_evcdws.avif"
+                                alt="">
+                        </div>
+                    </div>
+                    <div class="gallery-bottom">
+                        <h1>Vanilla Bean</h1>
+                        <div class="arrow-item">
+                            <img src="https://cdn.prod.website-files.com/693a0d53ce426f450963dbf9/693a1b5e5f6d07fed59bbfaf_ecd.svg"
+                                alt="">
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="gallery-container">
+                        <div class="topic-item">
+                            <p>Best Seller</p>
+                            <p>$33.00 USD</p>
+                        </div>
+                        <div class="image-item">
+                            <img class="img1"
+                                src="https://cdn.prod.website-files.com/693a0d53ce426f450963dc44/693b77820e20f3c5b73eaaf5_Frame%2025-p-2000.png"
+                                alt="">
+                            <img class="img2"
+                                src="https://cdn.prod.website-files.com/693a0d53ce426f450963dbf9/693da4ab219709f7138b926b_splash.avif"
+                                alt="">
+                            <img class="img3"
+                                src="https://cdn.prod.website-files.com/693a0d53ce426f450963dbf9/693b7ac2c35cfbbd839b4c02_evcdws.avif"
+                                alt="">
+                        </div>
+                    </div>
+                    <div class="gallery-bottom">
+                        <h1>Caramel Driz</h1>
+                        <div class="arrow-item">
+                            <img src="https://cdn.prod.website-files.com/693a0d53ce426f450963dbf9/693a1b5e5f6d07fed59bbfaf_ecd.svg"
+                                alt="">
+                        </div>
+                    </div>
+                </div>
+
+
+                <div>
+                    <div class="gallery-container">
+                        <div class="topic-item">
+                            <p>Best Seller</p>
+                            <p>$23.00 USD</p>
+                        </div>
+                        <div class="image-item">
+                            <img class="img1"
+                                src="https://cdn.prod.website-files.com/693a0d53ce426f450963dc44/693b77958062431e5431ef47_Frame%2023-p-2000.png"
+                                alt="">
+                            <img class="img2"
+                                src="https://cdn.prod.website-files.com/693a0d53ce426f450963dbf9/693da4ab219709f7138b926b_splash.avif"
+                                alt="">
+                            <img class="img3"
+                                src="https://cdn.prod.website-files.com/693a0d53ce426f450963dbf9/693b7ac2c35cfbbd839b4c02_evcdws.avif"
+                                alt="">
+                        </div>
+                    </div>
+                    <div class="gallery-bottom">
+                        <h1>Mocha Swirl</h1>
+                        <div class="arrow-item">
+                            <img src="https://cdn.prod.website-files.com/693a0d53ce426f450963dbf9/693a1b5e5f6d07fed59bbfaf_ecd.svg"
+                                alt="">
+                        </div>
+                    </div>
+                </div>
+
+
+                <div>
+                    <div class="gallery-container">
+                        <div class="topic-item">
+                            <p>Best Seller</p>
+                            <p>$23.00 USD</p>
+                        </div>
+                        <div class="image-item">
+                            <img class="img1"
+                                src="https://cdn.prod.website-files.com/693a0d53ce426f450963dc44/693b779bc60c4687c062f8ee_Frame%2026-p-2000.png"
+                                alt="">
+                            <img class="img2"
+                                src="https://cdn.prod.website-files.com/693a0d53ce426f450963dbf9/693da4ab219709f7138b926b_splash.avif"
+                                alt="">
+                            <img class="img3"
+                                src="https://cdn.prod.website-files.com/693a0d53ce426f450963dbf9/693b7ac2c35cfbbd839b4c02_evcdws.avif"
+                                alt="">
+                        </div>
+                    </div>
+                    <div class="gallery-bottom">
+                        <h1>Coconut</h1>
+                        <div class="arrow-item">
+                            <img src="https://cdn.prod.website-files.com/693a0d53ce426f450963dbf9/693a1b5e5f6d07fed59bbfaf_ecd.svg"
+                                alt="">
+                        </div>
+                    </div>
+                </div>
+
+
+                <div>
+                    <div class="gallery-container">
+                        <div class="topic-item">
+                            <p>Best Seller</p>
+                            <p>$33.00 USD</p>
+                        </div>
+                        <div class="image-item">
+                            <img class="img1"
+                                src="https://cdn.prod.website-files.com/693a0d53ce426f450963dc44/693b78b145833a482477ea35_Frame%2024-p-2000.png"
+                                alt="">
+                            <img class="img2"
+                                src="https://cdn.prod.website-files.com/693a0d53ce426f450963dbf9/693da4ab219709f7138b926b_splash.avif"
+                                alt="">
+                            <img class="img3"
+                                src="https://cdn.prod.website-files.com/693a0d53ce426f450963dbf9/693b7ac2c35cfbbd839b4c02_evcdws.avif"
+                                alt="">
+                        </div>
+                    </div>
+                    <div class="gallery-bottom">
+                        <h1>Marshmellow</h1>
+                        <div class="arrow-item">
+                            <img src="https://cdn.prod.website-files.com/693a0d53ce426f450963dbf9/693a1b5e5f6d07fed59bbfaf_ecd.svg"
+                                alt="">
+                        </div>
+                    </div>
+                </div>
+
+
+                <div>
+                    <div class="gallery-container">
+                        <div class="topic-item">
+                            <p>Best Seller</p>
+                            <p>$33.00 USD</p>
+                        </div>
+                        <div class="image-item">
+                            <img class="img1"
+                                src="https://cdn.prod.website-files.com/693a0d53ce426f450963dc44/693b78b73be0fd604b52a867_evdcs-p-2000.png"
+                                alt="">
+                            <img class="img2"
+                                src="https://cdn.prod.website-files.com/693a0d53ce426f450963dbf9/693da4ab219709f7138b926b_splash.avif"
+                                alt="">
+                            <img class="img3"
+                                src="https://cdn.prod.website-files.com/693a0d53ce426f450963dbf9/693b7ac2c35cfbbd839b4c02_evcdws.avif"
+                                alt="">
+                        </div>
+                    </div>
+                    <div class="gallery-bottom">
+                        <h1>Maple Oat</h1>
+                        <div class="arrow-item">
+                            <img src="https://cdn.prod.website-files.com/693a0d53ce426f450963dbf9/693a1b5e5f6d07fed59bbfaf_ecd.svg"
+                                alt="">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- End gallery section -->
+
+
+    <!-- Start Review Section -->
+    <section>
+        <div class="main-review">
+
+            <!-- Background Video (controls ဖြုတ်ပြီး အလိုအလျောက်လည်ပတ်စေရန် ပြင်ဆင်ထားသည်) -->
+            <video class="review-bg-video"
+                src="https://cdn.prod.website-files.com/693a0d53ce426f450963dbf9%2F693b84ac8ecc7fdea35f4f34_0_Dust_Debris_1920x1080_mp4.mp4"
+                autoplay muted loop playsinline></video>
+
+            <!-- Review Header (Title & Arrows) -->
+            <div class="review-header">
+                <h1>The reviews are in</h1>
+            </div>
+
+            <div class="review-arrow">
+                <i class="fa-solid fa-chevron-left"></i>
+                <i class=" fa-solid fa-chevron-right"></i>
+            </div>
+
+            <!-- Review Cards Wrapper -->
+            <div class="review-wrapper">
+
+                <!-- Card 1 -->
+                <div class="review-card">
+                    <div class="review-card-top">
+                        <img src="https://cdn.prod.website-files.com/693a0d53ce426f450963dbf9/693a18bfb81f272a0c881e10_fe.avif"
+                            alt="Star">
+                        <h1>Super Delicious!</h1>
+                    </div>
+
+                    <p>"Smooth, bold, and never bitter. This cold brew tastes incredibly clean when served
+                        chilled—perfect straight from the can."</p>
+
+                    <div class="horizontal-line"></div>
+
+                    <div class="review-footer">
+                        <div>
+                            <p>Daniela A.</p>
+                        </div>
+                        <div class="right">
+                            <img src="https://cdn.prod.website-files.com/693a0d53ce426f450963dbf9/693b878dccdb83662fe13774_efdvsc.svg"
+                                alt="Verified">
+                            <p>Verified</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="review-card">
+                    <div class="review-card-top">
+                        <img src="https://cdn.prod.website-files.com/693a0d53ce426f450963dbf9/693a18bfb81f272a0c881e10_fe.avif"
+                            alt="Star">
+                        <h1>MY GO-TO COLD BREW</h1>
+                    </div>
+
+                    <p>"Rich flavor with a smooth finish and no harsh aftertaste. I’ve tried a lot of canned coffee, and
+                        this one stands out."</p>
+
+                    <div class="horizontal-line"></div>
+
+                    <div class="review-footer">
+                        <div>
+                            <p>Mike S.</p>
+                        </div>
+                        <div class="right">
+                            <img src="https://cdn.prod.website-files.com/693a0d53ce426f450963dbf9/693b878dccdb83662fe13774_efdvsc.svg"
+                                alt="Verified">
+                            <p>Verified</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="review-card">
+                    <div class="review-card-top">
+                        <img src="https://cdn.prod.website-files.com/693a0d53ce426f450963dbf9/693a18bfb81f272a0c881e10_fe.avif"
+                            alt="Star">
+                        <h1>CLEAN AND REFRESHING</h1>
+                    </div>
+
+                    <p>"Super smooth with a rich coffee flavor. It’s refreshing without being watered down."</p>
+
+                    <div class="horizontal-line"></div>
+
+                    <div class="review-footer">
+
+                        <p>Daniela A.</p>
+
+                        <div class="right">
+                            <img src="https://cdn.prod.website-files.com/693a0d53ce426f450963dbf9/693b878dccdb83662fe13774_efdvsc.svg"
+                                alt="Verified">
+                            <p>Verified</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+    <!-- End Review Section -->
+
+
+    <!-- Start Everyday Section  -->
+    <section>
+        <div class="everday">
+            <div class="top">
+                <div class="header">
+                    <h1>DELICIOUS COLD BREW </h1>
+                    <h1>MADE FOR EVERYDAY</h1>
+                </div>
+
+                <div id="nav-right">
+                    <div class="nav-left">
+                        <div id="img">
+                            <img width="10px"
+                                src="	https://cdn.prod.website-files.com/693a0d53ce426f450963dbf9/693a1b5e5f6d07fed59bbfaf_ecd.svg"
+                                alt="" />
+                        </div>
+                        <div id="buy-now">
+                            <p>Learn More</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="main-img">
+                <img src="https://cdn.prod.website-files.com/693a0d53ce426f450963dbf9/693c2436bf36938e8d07e9c3_sd.avif"
+                    alt="">
+            </div>
+            <div class="bottom">
+                <h1>We brew cold brew the right way.</h1>
+                <p>Crafted for busy days and slow moments alike, our cold brew is smooth,</p>
+                <p>balanced, and easy to enjoy—anywhere, anytime.</p>
+                <div class="imgs">
+                    <div class="img1">
+                        <img width="30px"
+                            src="https://cdn.prod.website-files.com/693a0d53ce426f450963dbf9/693c24d838364f389c3a01a4_check.svg"
+                            alt="">
+                        <p>3-5 HOURS OF ENERGY</p>
+                    </div>
+                    <div class="img2">
+                        <img width="30px"
+                            src="https://cdn.prod.website-files.com/693a0d53ce426f450963dbf9/693c24d838364f389c3a01a4_check.svg"
+                            alt="">
+                        <p>REAL CREAMY MILK</p>
+                    </div>
+                    <div class="img3">
+                        <img width="30px"
+                            src="https://cdn.prod.website-files.com/693a0d53ce426f450963dbf9/693c255232535424e1e72011_letter-x_16083469.svg"
+                            alt="">
+                        <p>NO ARTIFICIAL STUFF</p>
+                    </div>
+                    <div class="img4">
+                        <img width="30px"
+                            src="https://cdn.prod.website-files.com/693a0d53ce426f450963dbf9/693c255232535424e1e72011_letter-x_16083469.svg"
+                            alt="">
+                        <p>NO ADDED SUGAR</p>
+                    </div>
+                    <div class="img5">
+                        <img width="30px"
+                            src="https://cdn.prod.website-files.com/693a0d53ce426f450963dbf9/693c255232535424e1e72011_letter-x_16083469.svg"
+                            alt="">
+                        <p>NO FAKE FLAVORS</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Everyday Section  -->
+
+
+    <!-- Start About Us Section  -->
+    <section>
+        <div class="about-main">
+            <div class="about-left">
+                <img src="https://cdn.prod.website-files.com/693a0d53ce426f450963dbf9/693c5c4b3ba3aeaa47f44695_dxszvc.avif"
+                    alt="">
+
+                <div class="text">
+                    <h1>Our journey began with a single cup of coffee, sparking a passion for crafting the perfect cold
+                        brew.</h1>
+                    <p>Stone Sip was created with one simple goal: to make cold brew that tastes great and fits
+                        effortlessly into everyday life. We believe good coffee shouldn’t be complicated—just carefully
+                        brewed, thoughtfully sourced, and ready when you are.</p>
+
+                    <div id="nav-right">
+                        <div class="nav-left">
+                            <div id="img">
+                                <img width="10px"
+                                    src="	https://cdn.prod.website-files.com/693a0d53ce426f450963dbf9/693a1b5e5f6d07fed59bbfaf_ecd.svg"
+                                    alt="" />
+                            </div>
+                            <div id="buy-now">
+                                <p>About Us</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="about-right">
+                <img src="https://cdn.prod.website-files.com/693a0d53ce426f450963dbf9/693c5aa68648d2f7ce99095b_sdcf.avif"
+                    alt="">
+            </div>
+        </div>
+    </section>
+    <!-- End About Us Section  -->
+
+    <!-- Start Line Up Section -->
+    <section>
+        <div class="header-lineup">
+            <h1>THE DRINK LINEUP</h1>
+            <div class="icon-lineup">
+                <div id="img1">
+                    <img width="20px"
+                        src="https://cdn.prod.website-files.com/693a0d53ce426f450963dbf9/693a0d53ce426f450963dc23_svgexport-9%20(2).svg"
+                        alt="">
+                </div>
+                <div id="img2">
+                    <img width="20px"
+                        src="https://cdn.prod.website-files.com/693a0d53ce426f450963dbf9/693a0d53ce426f450963dc4d_svgexport-10%20(1).svg"
+                        alt="">
+                </div>
+                <div id="img3">
+                    <img width="20px"
+                        src="https://cdn.prod.website-files.com/693a0d53ce426f450963dbf9/693a0d53ce426f450963dc50_svgexport-8%20(1).svg"
+                        alt="">
+                </div>
+            </div>
+        </div>
+        <div class="gallery-slide">
+            <img width="250px" height="360px"
+                src="https://cdn.prod.website-files.com/693a0d53ce426f450963dbf9/693ccdfccf376956549894d9_Rectangle-3-Copy-7.jpg.avif"
+                alt="">
+            <img width="250px" height="360px"
+                src="https://cdn.prod.website-files.com/693a0d53ce426f450963dbf9/693ccdfc675b0cb82584da77_Rectangle-3-Copy-3.jpg.avif"
+                alt="">
+            <img width="250px" height="360px"
+                src="https://cdn.prod.website-files.com/693a0d53ce426f450963dbf9/693ccdfc3124f91593213451_Rectangle-3-Copy-4.jpg.avif"
+                alt="">
+            <img width="250px" height="360px"
+                src="https://cdn.prod.website-files.com/693a0d53ce426f450963dbf9/693ccdfda3099a015e2d7f55_Rectangle-3-Copy.jpg.avif"
+                alt="">
+            <img width="250px" height="360px"
+                src="https://cdn.prod.website-files.com/693a0d53ce426f450963dbf9/693ccdfd0cca10fce5c49fa5_Rectangle-3-Copy-6.jpg.avif"
+                alt="">
+        </div>
+    </section>
+    <!-- End Line Up Section -->
+
+    <!-- Start Footer Section -->
+    <section>
+        <div class="footer">
+            <div class="footer-left">
+                <img width="500px"
+                    src="https://cdn.prod.website-files.com/693a0d53ce426f450963dbf9/693c7f516e4f1202a6bd2e43_wdw.svg"
+                    alt="">
+                <div class="menu">
+                    <div class="div1">
+                        <div>Menu</div>
+                        <div class="nav1">
+                            <a href="">Home 01</a>
+                            <a href="">Home 02</a>
+                            <a href="">About 01</a>
+                            <a href="">Contact</a>
+                        </div>
+                    </div>
+                    <div class="div2">
+                        <div>CMS</div>
+                        <div class="nav2">
+                            <a href="">Blog Article</a>
+                            <a href="">Product Page</a>
+                            <a href="">Product Category</a>
+                        </div>
+                    </div>
+                    <div class=" div3">
+                        <div>Admin</div>
+                        <div class="nav3">
+                            <a href="">Style Guide</a>
+                            <a href="">Licenses</a>
+                            <a href="">GSAP Instructions</a>
+                            <a href="">404</a>
+                            <a href="">Password</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="follow">
+                    <h1>Follow Us</h1>
+                    <div class="icon">
+                        <img width="30px"
+                            src="
+                            https://cdn.prod.website-files.com/693a0d53ce426f450963dbf9/693a0d53ce426f450963dc23_svgexport-9%20(2).svg"
+                            alt="">
+
+                        <img width="30px"
+                            src="https://cdn.prod.website-files.com/693a0d53ce426f450963dbf9/693a0d53ce426f450963dc4d_svgexport-10%20(1).svg"
+                            alt="">
+                        <img width="30px"
+                            src="https://cdn.prod.website-files.com/693a0d53ce426f450963dbf9/693a0d53ce426f450963dc50_svgexport-8%20(1).svg"
+                            alt="">
+                    </div>
+                </div>
+
+                <p>@2026 Stone Sip inc. All Rights Reserved</p>
+            </div>
+            <div class="footer-right">
+                <div class="content">
+                    <div class="title">
+                        <img width="120px"
+                            src="https://cdn.prod.website-files.com/693a0d53ce426f450963dbf9/693a18bfb81f272a0c881e10_fe.avif"
+                            alt="">
+                        <p>333 Reviews</p>
+                    </div>
+                    <h1>Loved by thousands</h1>
+                    <p>Praised for its smooth taste and bold flavor, our cold brew is a favorite among coffee
+                        lovers
+                        everywhere.</p>
+                    <img width="280px"
+                        src="https://cdn.prod.website-files.com/693a0d53ce426f450963dbf9/693cc67d65eb3f63eb791cb9_wecwcdsc.avif"
+                        alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Footer Section  -->
+</body>
+
+</html>
